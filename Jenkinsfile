@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('clean docker image') {
             steps{
-                sh 'docker rmi $(docker images | grep "<none>" | awk '{print $3}')'
+                sh 'docker rmi $(docker images | grep "<none>" | awk "{print $3}")'
             }
         }
 
