@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('clean docker image') {
+        stage('clean docker images') {
             steps{
                 sh 'docker rmi $(docker images | grep "<none>" | awk "{print $3}")'
             }
